@@ -2,4 +2,8 @@
     flask
     pytest
     cryptography
-    
+    tensorflow
+transformers
+flask-socketio
+pandas
+pycryptodome
