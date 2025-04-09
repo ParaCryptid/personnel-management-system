@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        body { font-family: sans-serif; background: #0e0e0e; color: white; padding: 2rem; }
+        h1 { color: #00ffcc; }
+        .logout { float: right; }
+        .section { margin-top: 2rem; padding: 1rem; background: #1c1c1c; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div class="logout">
+        <form action="/logout" method="POST"><button type="submit">Logout</button></form>
+    </div>
+    <h1>Welcome, {{ user_role }}</h1>
+    <div class="section">
+        <h2>Available Functions</h2>
+        <ul>
+            {% if user_role == 'admin' %}
+            <li>🔐 Access encrypted data</li>
+            <li>🛠 Configure system</li>
+            {% endif %}
+            <li>📊 View employee analytics</li>
+            <li>🧠 Run sentiment analysis</li>
+        </ul>
+    </div>
+</body>
+</html>
